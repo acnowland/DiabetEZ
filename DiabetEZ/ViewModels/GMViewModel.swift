@@ -18,7 +18,7 @@ class GlucoseMeasurementViewModel: ObservableObject, Identifiable {
     init(measurement: glucoseMeasurment){
         self.measurement = measurement
         
-        $measurement.map{ measurement in
+        $measurement.compactMap{ measurement in
             measurement.id
         }
         .assign(to: \.id, on: self)

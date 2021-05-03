@@ -11,11 +11,13 @@ import SwiftUICharts
 struct ContentView: View {
     
     @ObservedObject var glucoseListVM = GlucoseListViewModel()
+    @ObservedObject var measurements = measurementRepository()
     @State private var isShowingAddMeasurement = false
+
     
     
     var allReadings: [Double] {
-        let numbers = testData
+        let numbers = measurements.measurements
         var numberArray = [Double]()
         for measurement in numbers {
             let newReading = Double(measurement.glucoseNumber)
