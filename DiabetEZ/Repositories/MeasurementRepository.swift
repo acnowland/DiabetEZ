@@ -27,7 +27,7 @@ class measurementRepository: ObservableObject {
         
         db.collection(path)
             .order(by: "date")
-            .whereField("userID", isEqualTo: userID)
+            .whereField("userID", isEqualTo: userID!)
             .addSnapshotListener{ (snapshot, error) in
             if let error = error {
                 print(error)

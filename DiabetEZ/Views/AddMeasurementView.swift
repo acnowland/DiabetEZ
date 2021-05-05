@@ -14,6 +14,7 @@ struct AddMeasurementView: View {
     @State var showAddedAlert = false
     @State var todaysDate = Date()
     @ObservedObject var measurements = measurementRepository()
+    
 
     
     func converToInt(reading: String) -> Int {
@@ -58,6 +59,7 @@ struct AddMeasurementView: View {
         }
     }
 }
+
 
 
 

@@ -23,6 +23,7 @@
 		DA1056CB2642F2F3000FE875 /* SignInbutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1056CA2642F2F3000FE875 /* SignInbutton.swift */; };
 		DA1056CD2642F3F1000FE875 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1056CC2642F3F1000FE875 /* SignInView.swift */; };
 		DA1056D02642F98D000FE875 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA1056CF2642F98D000FE875 /* FirebaseAuth */; };
+		DA3EB1B126434961000FAFCE /* A1cView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EB1B026434961000FAFCE /* A1cView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DA1056C826409133000FE875 /* MeasurementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementRepository.swift; sourceTree = "<group>"; };
 		DA1056CA2642F2F3000FE875 /* SignInbutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInbutton.swift; sourceTree = "<group>"; };
 		DA1056CC2642F3F1000FE875 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DA3EB1B026434961000FAFCE /* A1cView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1cView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				DA1056B7264087E8000FE875 /* AddMeasurementView.swift */,
 				DA1056CA2642F2F3000FE875 /* SignInbutton.swift */,
 				DA1056CC2642F3F1000FE875 /* SignInView.swift */,
+				DA3EB1B026434961000FAFCE /* A1cView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				DA1056B6264087A4000FE875 /* GlucoseMeasurment.swift in Sources */,
 				DA1056CB2642F2F3000FE875 /* SignInbutton.swift in Sources */,
 				DA1056C926409133000FE875 /* MeasurementRepository.swift in Sources */,
+				DA3EB1B126434961000FAFCE /* A1cView.swift in Sources */,
 				DA1056BC26408822000FE875 /* GlucoseListViewModel.swift in Sources */,
 				DA1056B8264087E8000FE875 /* AddMeasurementView.swift in Sources */,
 				DA1056A52640875C000FE875 /* ContentView.swift in Sources */,
