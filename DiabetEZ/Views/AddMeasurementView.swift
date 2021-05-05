@@ -13,8 +13,13 @@ struct AddMeasurementView: View {
     @State var reading = ""
     @State var showAddedAlert = false
     @State var todaysDate = Date()
+    @ObservedObject var measurements = measurementRepository()
+
     
-    
+    func converToInt(reading: String) -> Int {
+        return Int(reading)!
+    }
+        
     
     
     var body: some View {
@@ -29,7 +34,9 @@ struct AddMeasurementView: View {
                 Section{
                     Button("Submit Measurement"){
                         self.showAddedAlert.toggle()
-                        print("\(todaysDate)")
+                        let numReading = converToInt(reading: reading)
+                        let glucoseMeasruement = glucoseMeasurment(date: date, glucoseNumber: numReading)
+                        measurements.addData(glucoseMeasruement)
                     }
                 }
                 
@@ -41,10 +48,7 @@ struct AddMeasurementView: View {
                       dismissButton: .default(Text("Thank You")))
                 
             }
-            
         }
-
-        
     }
 }
 
