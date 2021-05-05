@@ -21,14 +21,27 @@ class measurementRepository: ObservableObject {
     }
     
     func loadData(){
-        db.collection(path).addSnapshotListener{ (snapshot, error) in
+        db.collection(path)
+            .order(by: "date")
+            .addSnapshotListener{ (snapshot, error) in
             if let error = error {
                 print(error)
                 return
             }
+
             self.measurements =  snapshot?.documents.compactMap{ document in
                 try? document.data(as: glucoseMeasurment.self)
             } ?? []
         }
+    }
+    
+    func addData(_ measurement: glucoseMeasurment){
+        do{
+            let _ = try db.collection(path).addDocument(from: measurement)
+        }
+        catch{
+            fatalError("Unable to add measurement \(error.localizedDescription)")
+        }
+        
     }
 }
