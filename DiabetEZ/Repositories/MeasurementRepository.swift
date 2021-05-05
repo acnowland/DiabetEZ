@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -21,8 +23,11 @@ class measurementRepository: ObservableObject {
     }
     
     func loadData(){
+        let userID = Auth.auth().currentUser?.uid
+        
         db.collection(path)
             .order(by: "date")
+            .whereField("userID", isEqualTo: userID)
             .addSnapshotListener{ (snapshot, error) in
             if let error = error {
                 print(error)
@@ -37,7 +42,10 @@ class measurementRepository: ObservableObject {
     
     func addData(_ measurement: glucoseMeasurment){
         do{
-            let _ = try db.collection(path).addDocument(from: measurement)
+            
+            var tooAdd = measurement
+            tooAdd.userID = Auth.auth().currentUser?.uid
+            let _ = try db.collection(path).addDocument(from: tooAdd)
         }
         catch{
             fatalError("Unable to add measurement \(error.localizedDescription)")

@@ -13,5 +13,6 @@ struct glucoseMeasurment: Codable, Identifiable {
    @DocumentID var id: String?
     var date: String
     var glucoseNumber: Int
+    var userID: String?
 }
 

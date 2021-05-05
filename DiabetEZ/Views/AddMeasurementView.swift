@@ -37,6 +37,8 @@ struct AddMeasurementView: View {
                         let numReading = converToInt(reading: reading)
                         let glucoseMeasruement = glucoseMeasurment(date: date, glucoseNumber: numReading)
                         measurements.addData(glucoseMeasruement)
+                        self.date = ""
+                        self.reading = ""
                     }
                 }
                 
