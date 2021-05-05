@@ -31,39 +31,41 @@ struct ContentView: View {
         
         VStack {
             NavigationView{
-                VStack{
-                    LineView(data: allReadings, title: "Glucose Readings")
-                    List(glucoseListVM.glucoseMeasurmentViewModels){ glucoseMeasurementVM in
-                        HStack{
-                            Text(glucoseMeasurementVM.measurement.date)
-                                .font(.title3)
-                            Spacer()
-                            Text("\(glucoseMeasurementVM.measurement.glucoseNumber)")
-                                .font(.title)
-                            Spacer()
-                        }
-                        .padding()
-                        
-                    }
-                    NavigationLink(destination: AddMeasurementView(), isActive: $isShowingAddMeasurement) { EmptyView() }
-                    Button(action: {
-                        self.isShowingAddMeasurement = true
-                        print("Add Glucose Clicked")
-                    }) {
-                        HStack{
-                            Text("Add Glucose Measurement")
-                                .padding(10)
-                                .background(Color.purple)
-                                .foregroundColor(Color.white)
-                                .cornerRadius(35)
-                                .font(.title2)
-                                .padding(.top, 25)
+                ZStack{
+                    VStack{
+                        LineView(data: allReadings, title: "Glucose Readings")
+                        List(glucoseListVM.glucoseMeasurmentViewModels){ glucoseMeasurementVM in
+                            HStack{
+                                Text(glucoseMeasurementVM.measurement.date)
+                                    .font(.title3)
+                                Spacer()
+                                Text("\(glucoseMeasurementVM.measurement.glucoseNumber)")
+                                    .font(.title)
+                                Spacer()
+                            }
+                            .padding()
                             
                         }
+                        NavigationLink(destination: AddMeasurementView(), isActive: $isShowingAddMeasurement) { EmptyView() }
+                        Button(action: {
+                            self.isShowingAddMeasurement = true
+                            print("Add Glucose Clicked")
+                        }) {
+                            HStack{
+                                Text("Add Glucose Measurement")
+                                    .padding(10)
+                                    .background(Color.purple)
+                                    .foregroundColor(Color.white)
+                                    .cornerRadius(35)
+                                    .font(.title2)
+                                    .padding(.top, 25)
+ 
+                            }
+                        }
+                        .navigationBarTitle("Diabet-EZ", displayMode: .inline)
                     }
-                    .navigationBarTitle("Diabet-EZ", displayMode: .inline)
+                    
                 }
-                
             }
         }
     }

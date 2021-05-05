@@ -26,8 +26,8 @@ struct AddMeasurementView: View {
         NavigationView{
             Form{
                 Section{
-//                    DatePicker("Select Date", selection: $todaysDate, displayedComponents: .date)
-                    TextField("Please enter the date", text: $date)
+                    DatePicker("Select Date", selection: $todaysDate, displayedComponents: .date)
+//                    TextField("Please enter the date", text: $date)
                     TextField("Please enter glucose reading", text: $reading)
                         .keyboardType(.numberPad)
                 }
@@ -35,12 +35,17 @@ struct AddMeasurementView: View {
                     Button("Submit Measurement"){
                         self.showAddedAlert.toggle()
                         let numReading = converToInt(reading: reading)
-                        let glucoseMeasruement = glucoseMeasurment(date: date, glucoseNumber: numReading)
+                        let formatter = DateFormatter()
+                        formatter.dateStyle = .short
+                        formatter.timeStyle = .none
+                        let formattedDate = formatter.string(from: todaysDate)
+                        let glucoseMeasruement = glucoseMeasurment(date: formattedDate, glucoseNumber: numReading)
                         measurements.addData(glucoseMeasruement)
                         self.date = ""
                         self.reading = ""
                     }
                 }
+                .disabled(reading.isEmpty)
                 
             }
             .navigationTitle("Add Measurement")
