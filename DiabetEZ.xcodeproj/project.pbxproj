@@ -18,11 +18,11 @@
 		DA1056BF2640887D000FE875 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DA1056BE2640887D000FE875 /* SwiftUICharts */; };
 		DA1056C226408C64000FE875 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA1056C126408C64000FE875 /* FirebaseFirestore */; };
 		DA1056C426408C64000FE875 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DA1056C326408C64000FE875 /* FirebaseFirestoreSwift-Beta */; };
-		DA1056C626408CAD000FE875 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA1056C526408CAD000FE875 /* GoogleService-Info.plist */; };
 		DA1056C926409133000FE875 /* MeasurementRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1056C826409133000FE875 /* MeasurementRepository.swift */; };
 		DA1056CB2642F2F3000FE875 /* SignInbutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1056CA2642F2F3000FE875 /* SignInbutton.swift */; };
 		DA1056CD2642F3F1000FE875 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1056CC2642F3F1000FE875 /* SignInView.swift */; };
 		DA1056D02642F98D000FE875 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA1056CF2642F98D000FE875 /* FirebaseAuth */; };
+		DA10B075264997FE0087ECA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA10B074264997FE0087ECA7 /* GoogleService-Info.plist */; };
 		DA3EB1B126434961000FAFCE /* A1cView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EB1B026434961000FAFCE /* A1cView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +37,10 @@
 		DA1056B7264087E8000FE875 /* AddMeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeasurementView.swift; sourceTree = "<group>"; };
 		DA1056B926408809000FE875 /* GMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMViewModel.swift; sourceTree = "<group>"; };
 		DA1056BB26408822000FE875 /* GlucoseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoseListViewModel.swift; sourceTree = "<group>"; };
-		DA1056C526408CAD000FE875 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA1056C826409133000FE875 /* MeasurementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementRepository.swift; sourceTree = "<group>"; };
 		DA1056CA2642F2F3000FE875 /* SignInbutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInbutton.swift; sourceTree = "<group>"; };
 		DA1056CC2642F3F1000FE875 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DA10B074264997FE0087ECA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA3EB1B026434961000FAFCE /* A1cView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1cView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 				DA1056A22640875C000FE875 /* DiabetEZApp.swift */,
 				DA1056A62640875D000FE875 /* Assets.xcassets */,
 				DA1056AB2640875D000FE875 /* Info.plist */,
-				DA1056C526408CAD000FE875 /* GoogleService-Info.plist */,
+				DA10B074264997FE0087ECA7 /* GoogleService-Info.plist */,
 				DA1056A82640875D000FE875 /* Preview Content */,
 			);
 			path = DiabetEZ;
@@ -212,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1056AA2640875D000FE875 /* Preview Assets.xcassets in Resources */,
-				DA1056C626408CAD000FE875 /* GoogleService-Info.plist in Resources */,
+				DA10B075264997FE0087ECA7 /* GoogleService-Info.plist in Resources */,
 				DA1056A72640875D000FE875 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
