@@ -37,9 +37,11 @@ struct AddMeasurementView: View {
                         self.showAddedAlert.toggle()
                         let numReading = converToInt(reading: reading)
                         let formatter = DateFormatter()
-                        formatter.dateStyle = .short
-                        formatter.timeStyle = .none
+                        formatter.dateFormat = "MM/dd/yyyy"
+//                        formatter.dateStyle = .long
+//                        formatter.timeStyle = .none
                         let formattedDate = formatter.string(from: todaysDate)
+                        print(formattedDate)
                         let glucoseMeasruement = glucoseMeasurment(date: formattedDate, glucoseNumber: numReading)
                         measurements.addData(glucoseMeasruement)
                         self.date = ""
