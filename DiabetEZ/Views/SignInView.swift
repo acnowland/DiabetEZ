@@ -13,20 +13,24 @@ struct SignInView: View {
     
     
     var body: some View {
-        VStack{
-            SignInWithAppleButton()
-                .frame(width: 280, height: 70)
-                .cornerRadius(25)
-                .shadow(color: .purple, radius: 15)
-                .onTapGesture {
-                    self.presentationMode.wrappedValue.dismiss()
-                    
-                }
-            Text("When you Sign In you will have access to your reaadings across multiple devices! ")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .padding()
-                .multilineTextAlignment(.center)
+        ZStack{
+            Color.black.opacity(0.05)
+            VStack{
+                SignInWithAppleButton()
+                    .frame(width: 280, height: 70)
+                    .cornerRadius(25)
+                    .shadow(color: Color.purple.opacity(0.2), radius: 15)
+                    .onTapGesture {
+                        self.presentationMode.wrappedValue.dismiss()
+                        
+                    }
+                Text("When you Sign In you will have access to your reaadings across multiple devices! ")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .padding()
+                    .multilineTextAlignment(.center)
+            }
         }
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
