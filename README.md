@@ -1,4 +1,4 @@
-# DiabetEZ
+# Diabet-EZ
 
 # The solution for easy diabetic glucose management
 
